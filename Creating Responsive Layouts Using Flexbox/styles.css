@@ -1,0 +1,97 @@
+/* Importar la fuente Poppins desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* Estilos para la clase body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+/* Estilos para la clase header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #2fa1f8;
+  padding: 10px;
+}
+/* Estilos para la clase nav-ul */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+/* Estilos para la clase nav-li */
+nav li {
+  margin-right: 20px;
+}
+/* Estilos para la clase nav-li-a */
+nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Estilos para la clase logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+/* Estilos para la imagen del logo */
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+/* Estilos para la clase main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Estilos para el contenido de la clase main */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+/* Estilos para la clase aside */
+aside {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+/* Estilos para la clase footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16005e;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Los Media Queries se activaran cuando el ancho de la pantalla sea igual o inferior a 768 px. Se aplica para los dispositivos con pantallas pequeñas. */
+@media screen and (max-width: 768px) {
+  /*  Se modifica el header para que los elementos se muestren en una columna en lugar de en una fila. */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Se cambia la direccion de los elementos del nav-ul a una columna, se moveran de manera vertical en vez de horizontalmente. */
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* Se agrega un margen inferior a 10 px a los elementos li que estan dentro del nav para crear un espacio en los elementos de la lista. */
+  nav li {
+    margin-bottom: 10px;
+  }
+  /* Se cambia la direccion de la clase main a una column, los elementos dentro de la clase estaran verticalmente en vez de estar en una fila. */
+  main {
+    flex-direction: column;
+  }
+  /* Se agrega la propiedad flex en {none} para que los elementos dentro no crezcan y se agrega la propiedad {width} a un 100% para que ocupe todo el ancho disponible. */
+  .main-content,
+  .sidebar {
+    flex: none;
+    width: 100%;
+  }
+}
